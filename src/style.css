@@ -6,46 +6,37 @@
 html {
   font-family: Roboto, sans-serif;
   font-size: 12px;
+  font-weight: 500;
 }
 
 body {
   margin: 0;
-  cursor: pointer;
 }
 
 .header {
-  /* display: flex;
-  position: sticky; */
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+
   text-transform: uppercase;
-  font-weight: 500;
-  background: #fff;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  background-image: url(images/logo.png);
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 50px;
-  height: 40px;
-}
-
-.nav {
-  text-align: center;
-  /* background-color: pink; */
+  display: block;
+  position: absolute;
+  padding: 20px 50px;
 }
 
 .nav__list {
-  margin: 0;
-
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: right;
 
   list-style: none;
 }
 
 .nav__link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,29 +48,25 @@ body {
   text-decoration: none;
 }
 
+.nav__link:last-child {
+  padding-right: 0;
+}
+
 .nav__link:hover {
   color: #00acdc;
 }
 
 .is-active {
   color: #00acdc;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .is-active::after {
+  position: absolute;
   content: "";
+  bottom: 0;
   height: 4px;
   width: 100%;
 
-  border-style: solid;
   border-radius: 8px;
-  border-color: #00acdc;
   background-color: #00acdc;
-}
-
-.lastLink {
-  padding-right: 0;
 }
