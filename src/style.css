@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
   src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
 }
 
@@ -16,21 +16,19 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   text-transform: uppercase;
 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.logo {
-  display: block;
-  position: absolute;
-  padding: 20px 50px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.05);
 }
 
 .nav__list {
   position: relative;
   display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 50px;
 
   list-style: none;
 }
@@ -48,8 +46,14 @@ body {
   text-decoration: none;
 }
 
-.nav__link:last-child {
-  padding-right: 0;
+.nav__link--logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.nav__link--last-child {
+  margin-right: 0;
 }
 
 .nav__link:hover {
